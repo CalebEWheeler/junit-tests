@@ -8,4 +8,12 @@ public class StudentsTest {
         Class.forName("Student");
     }
 
+    @Test
+    public void testCreateStudentInstance() {
+        Student caleb = new Student(1l, "Caleb");
+        Student norbert = null;
+        assertNotNull(caleb);
+        assertNull(norbert);
+    }
+
 }
