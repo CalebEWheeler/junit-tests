@@ -3,6 +3,13 @@ import static org.junit.Assert.*;
 
 public class StudentsTest {
 
+    private Student caleb;
+
+    @Before
+    public void setUp(){
+        caleb = new Student(1l, "Caleb");
+    }
+
     @Test
     public void testIfStudentClassExists() throws ClassNotFoundException {
         Class.forName("Student");
@@ -10,7 +17,6 @@ public class StudentsTest {
 
     @Test
     public void testCreateStudentInstance() {
-        Student caleb = new Student(1l, "Caleb");
         Student norbert = null;
         assertNotNull(caleb);
         assertNull(norbert);
@@ -18,7 +24,6 @@ public class StudentsTest {
 
     @Test
     public void testStudentFields() {
-        Student caleb = new Student(1l, "Caleb");
         assertEquals("Caleb", caleb.getName());
         assertEquals(1l, caleb.getId());
         assertNotEquals(2l, caleb.getId());
@@ -26,14 +31,12 @@ public class StudentsTest {
 
     @Test
     public void testAddGrade() {
-        Student caleb = new Student(1l, "Caleb");
         caleb.addGrade(86);
         assertEquals(86, (int) caleb.getGrades().get(0));
     }
 
     @Test
     public void testGetGradeAverage() {
-        Student caleb = new Student(1l, "Caleb");
         caleb.addGrade(86);
         caleb.addGrade(89);
         assertEquals(87.5, caleb.getGradeAverage(),0);
