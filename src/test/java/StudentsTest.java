@@ -4,7 +4,8 @@ import static org.junit.Assert.*;
 public class StudentsTest {
 
     private Student caleb;
-
+    //creates an object to be able to run tests against without
+    // having to create this object in every test!
     @Before
     public void setUp(){
         caleb = new Student(1l, "Caleb");
