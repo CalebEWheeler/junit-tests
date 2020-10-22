@@ -1,2 +1,4 @@
-package java;public class StudentsTest {
+package java;
+
+public class StudentsTest {
 }
