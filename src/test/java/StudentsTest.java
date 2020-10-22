@@ -31,4 +31,12 @@ public class StudentsTest {
         assertEquals(86, (int) caleb.getGrades().get(0));
     }
 
+    @Test
+    public void testGetGradeAverage() {
+        Student caleb = new Student(1l, "Caleb");
+        caleb.addGrade(86);
+        caleb.addGrade(89);
+        assertEquals(87.5, caleb.getGradeAverage(),0);
+        assertNotEquals(89, caleb.getGradeAverage(), 0);
+    }
 }

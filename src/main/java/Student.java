@@ -58,6 +58,6 @@ public class Student {
         for (double grade : this.grades) {
             sum += grade;
         }
-        return sum;
+        return sum / this.grades.size();
     }
 }
