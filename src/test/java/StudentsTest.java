@@ -16,4 +16,12 @@ public class StudentsTest {
         assertNull(norbert);
     }
 
+    @Test
+    public void testStudentFields() {
+        Student caleb = new Student(1l, "Caleb");
+        assertEquals("Caleb", caleb.getName());
+        assertEquals(1l, caleb.getId());
+        assertNotEquals(2l, caleb.getId());
+    }
+
 }

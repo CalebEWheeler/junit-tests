@@ -36,5 +36,8 @@ public class Student {
         this.grades = new ArrayList<>();
     }
 
+    //change values to fail tests
+    public String getName() {return name;}
+    public long getId() {return id;}
 
 }
