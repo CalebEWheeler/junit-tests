@@ -24,4 +24,11 @@ public class StudentsTest {
         assertNotEquals(2l, caleb.getId());
     }
 
+    @Test
+    public void testAddGrade() {
+        Student caleb = new Student(1l, "Caleb");
+        caleb.addGrade(86);
+        assertEquals(86, (int) caleb.getGrades().get(0));
+    }
+
 }
